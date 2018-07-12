@@ -9,12 +9,11 @@
 import UIKit
 
 protocol GradientService {
-    func createGradient(view: UIView, startColor: UIColor, endColor: UIColor, startPoint: CGPoint, endPoint: CGPoint) -> CAGradientLayer
+    func createGradient(view: UIView, colors: [UIColor], startPoint: CGPoint, endPoint: CGPoint) -> CAGradientLayer
 }
 extension GradientService {
     func createGradient(view: UIView,
-                        startColor: UIColor = UIColor.Default.lightCoral,
-                        endColor: UIColor = UIColor.Default.lightPupple,
+                        colors: [UIColor] = [UIColor.Default.lightCoral, UIColor.Default.lightPupple],
                         startPoint: CGPoint = CGPoint(x: 0.0, y: 0.3),
                         endPoint: CGPoint = CGPoint(x: 0.0, y: 1.0)) -> CAGradientLayer {
         var gradientLayer = view.layer.sublayers?.filter({$0 is CAGradientLayer}).first as? CAGradientLayer
@@ -23,9 +22,10 @@ extension GradientService {
             view.layer.insertSublayer(gradientLayer!, at: 0)
         }
         gradientLayer?.frame = view.bounds
-        gradientLayer?.colors = [startColor.cgColor, endColor.cgColor]
+        gradientLayer?.colors = colors.map({$0.cgColor})
         gradientLayer?.startPoint = startPoint
         gradientLayer?.endPoint = endPoint
         return gradientLayer!
     }
 }
+
