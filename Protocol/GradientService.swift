@@ -17,12 +17,15 @@ extension GradientService {
                         endColor: UIColor = UIColor.Default.lightPupple,
                         startPoint: CGPoint = CGPoint(x: 0.0, y: 0.3),
                         endPoint: CGPoint = CGPoint(x: 0.0, y: 1.0)) -> CAGradientLayer {
-        let gradientLayer = CAGradientLayer()
-        gradientLayer.frame = view.bounds
-        gradientLayer.colors = [startColor.cgColor, endColor.cgColor]
-        gradientLayer.startPoint = startPoint
-        gradientLayer.endPoint = endPoint
-        view.layer.insertSublayer(gradientLayer, at: 0)
-        return gradientLayer
+        var gradientLayer = view.layer.sublayers?.filter({$0 is CAGradientLayer}).first as? CAGradientLayer
+        if gradientLayer == nil {
+            gradientLayer = CAGradientLayer()
+            view.layer.insertSublayer(gradientLayer!, at: 0)
+        }
+        gradientLayer?.frame = view.bounds
+        gradientLayer?.colors = [startColor.cgColor, endColor.cgColor]
+        gradientLayer?.startPoint = startPoint
+        gradientLayer?.endPoint = endPoint
+        return gradientLayer!
     }
 }
