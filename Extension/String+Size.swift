@@ -1,11 +1,3 @@
-//
-//  String+Size.swift
-//  BBS
-//
-//  Created by 이광용 on 2018. 7. 6..
-//  Copyright © 2018년 이광용. All rights reserved.
-//
-
 import UIKit
 
 extension String {

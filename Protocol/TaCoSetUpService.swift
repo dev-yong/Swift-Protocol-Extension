@@ -1,11 +1,3 @@
-//
-//  TaCoService.swift
-//  BBS
-//
-//  Created by 이광용 on 2018. 7. 6..
-//  Copyright © 2018년 이광용. All rights reserved.
-//
-
 import UIKit
 
 protocol TableViewSetUpService: class {
@@ -34,7 +26,8 @@ extension TableViewSetUpService where Self: UIViewController & UITableViewDataSo
 
 protocol CollectionViewSetUpService: class {
     associatedtype T
-    
+    func setUp(collectionView: UICollectionView, cell: UICollectionViewCell.Type?)
+    func dequeueReusableCell<T: UICollectionViewCell>(collectionView: UICollectionView, forIndexPath indexPath: IndexPath) -> T
 }
 
 extension CollectionViewSetUpService where Self: UIViewController & UICollectionViewDelegate & UICollectionViewDataSource {

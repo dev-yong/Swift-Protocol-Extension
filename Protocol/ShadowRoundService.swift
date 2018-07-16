@@ -1,13 +1,4 @@
-//
-//  UIView+RoundedShadow.swift
-//  BBS
-//
-//  Created by 이광용 on 2018. 7. 3..
-//  Copyright © 2018년 이광용. All rights reserved.
-//
-
 import UIKit
-import SnapKit
 
 protocol ShadowRoundService {
     func shadowRounded(view: UIView, cornerRadius: CGFloat, shadowColor: UIColor, shadowOffset: CGSize, shadowRadius: CGFloat, shadowOpacity: Float)
