@@ -12,3 +12,14 @@ extension TransparentNavBarService where Self: UIViewController {
         self.navigationController?.navigationBar.layer.shadowColor = UIColor.clear.cgColor
     }
 }
+
+/*
+class ViewController: UIViewController, TransparentNavBarService {
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        self.transparentNavigationBar()
+    }
+}
+*/

@@ -21,3 +21,26 @@ extension GradientService {
     }
 }
 
+/*
+import UIKit
+
+@IBDesignable
+class GradientView: UIView, GradientService {
+    @IBInspectable var colors: [UIColor] = [UIColor.Default.lightCoral, UIColor.Default.lightPupple] {
+        didSet {
+            gradientLayer = createGradient(view: self,
+                                           colors: colors)
+        }
+    }
+    var gradientLayer: CAGradientLayer?
+    
+    override func awakeFromNib() {
+        gradientLayer = createGradient(view: self, colors: colors)
+    }
+    
+    override func layoutSubviews() {
+        self.gradientLayer?.frame = self.bounds
+    }
+}
+*/
+

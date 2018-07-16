@@ -25,3 +25,7 @@ extension UILabel {
         return CGSize(width: 0, height: 0)
     }
 }
+
+/*
+    let size =  titleLabel.textSize
+ */

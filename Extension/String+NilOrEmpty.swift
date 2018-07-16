@@ -27,3 +27,7 @@ extension Optional: NilOrEmpty where Wrapped == String {
         else{return false}
     }
 }
+
+/*
+    str.isNilOrEmpty()
+ */

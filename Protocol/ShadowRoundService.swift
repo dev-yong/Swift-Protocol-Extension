@@ -34,3 +34,12 @@ extension ShadowRoundService {
         }
     }
 }
+
+/*
+class RoundedShadowButton: UIButton, ShadowRoundService {
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        self.shadowRounded(view: self, cornerRadius: cornerRadius)
+    }
+}
+*/

@@ -33,3 +33,4 @@ extension EnumCollection {
         return iterateEnum(self).filter { $0.description == description }.first
     }
 }
+

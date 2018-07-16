@@ -38,26 +38,27 @@ extension KeyboardControlService where Self: UIViewController {
     
     
 }
-/* Example
- class ViewController: UIViewController, KeyboardControlService {
- override func viewDidLoad() {
- super.viewDidLoad()
- self.setKyeboardControl(willShow: setKeyboardWillShow(), willHide: setKyeboarWillHide())
- }
- 
- func setKeyboardWillShow() -> KeyboardInfo{
- return { rect, duration in
- print("keyboard will show - frame : \(rect), duration : \(duration)")
- }
- }
- 
- func setKyeboarWillHide() -> KeyboardInfo{
- return { rect, duration in
- print("keyboard will hide - frame : \(rect), duration : \(duration)")
- }
- }
- deinit {
- self.removeKeyboardControl()
- }
- }
- */
+
+/*
+class ViewController: UIViewController, KeyboardControlService {
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        self.setKyeboardControl(willShow: setKeyboardWillShow(), willHide: setKyeboarWillHide())
+    }
+    
+    func setKeyboardWillShow() -> KeyboardInfo{
+        return { rect, duration in
+            print("keyboard will show - frame : \(rect), duration : \(duration)")
+        }
+    }
+    
+    func setKyeboarWillHide() -> KeyboardInfo{
+        return { rect, duration in
+            print("keyboard will hide - frame : \(rect), duration : \(duration)")
+        }
+    }
+    deinit {
+        self.removeKeyboardControl()
+    }
+}
+*/
